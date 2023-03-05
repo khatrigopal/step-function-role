@@ -3,7 +3,7 @@ data "aws_iam_policy_document" "stepfunction_execution_role" {
    actions = ["sts.AssumeRole"]
    effect = "Allow"
    principals {
-      identification = ["states.amazonaws.com"]
+      identifiers = ["states.amazonaws.com"]
       type           = "Service"
    }
  }
