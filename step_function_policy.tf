@@ -1,10 +1,10 @@
 resource "aws_iam_role" "stepfunction_exectuion_role" {
- name  = step-function-execution-role
+ name  = "step-function-execution-role"
  assume_role_policy = data_Step_function.aws_iam_policy_document.stepfunction_execution_role.json
 }
 
 resource "aws_iam_policy" "stepfunction_exectuion_policy" {
- name  = step-function-execution-policy
+ name  = "step-function-execution-policy"
  assume_role_policy = data_Step_function.aws_iam_policy_document.stepfunction_execution_policy.json
 }
 
