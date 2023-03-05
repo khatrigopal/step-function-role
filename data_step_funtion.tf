@@ -19,13 +19,13 @@ data "aws_iam_policy_document" "stepfunction_execution_policy" {
           "states:StartExecution",
           "states:StopExecution"
         ]
-  resource = "*"
+  resources = ["*"]
  }
   
  statement {
   effect = "Allow"
   actions = ["lambda:InvokeFunction"]
-  resource = "*" 
+  resources = ["*"] 
  }
  }
    
