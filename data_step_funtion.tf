@@ -1,4 +1,4 @@
-data_step_funtion "aws_iam_policy_document" "stepfunction_execution_role" {
+data "aws_iam_policy_document" "stepfunction_execution_role" {
  statement {
    actions = ["sts.AssumeRole"]
    effect = "Allow"
@@ -9,7 +9,7 @@ data_step_funtion "aws_iam_policy_document" "stepfunction_execution_role" {
  }
 }
 
-data_step_funtion "aws_iam_policy_document" "stepfunction_execution_policy" {
+data "aws_iam_policy_document" "stepfunction_execution_policy" {
  statement {
   effect = "Allow"
   actions = [
