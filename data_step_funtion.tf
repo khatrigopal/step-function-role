@@ -4,13 +4,13 @@ data "aws_iam_policy_document" "stepfunction_execution_role" {
    effect = "Allow"
    principals {
       identification = ["states.amazonaws.com"]
-      type           = Service
+      type           = "Service"
    }
  }
 }
 
 data "aws_iam_policy_document" "stepfunction_execution_policy" {
- stetement {
+ statement {
   effect = "Allow"
   actions = [
           "states:List*",
@@ -22,7 +22,7 @@ data "aws_iam_policy_document" "stepfunction_execution_policy" {
   resource = "*"
  }
   
- stetement {
+ statement {
   effect = "Allow"
   actions = ["lambda:InvokeFunction"]
   resource = "*" 
